@@ -1,86 +1,48 @@
-# 0x04. Loops, conditions and parsing
+# BASH Scripting - Loops, conditions and parsing
+**Learning the Use of Loops to automate operations in the unix system**
 
-## Resources:books:
-Read or watch:
-* [Loops sample](https://intranet.hbtn.io/rltoken/fRCmr2B_Ne-rQdFZdfUDcA)
-* [Variable assignment and arithmetic](https://intranet.hbtn.io/rltoken/o8mucWW2XddN4MHiHSArkA)
-* [Comparison operators](https://intranet.hbtn.io/rltoken/jN0bfG-Qpkg3aYJM-n3LHw)
-* [File test operators](https://intranet.hbtn.io/rltoken/mYWUvI1VFqR_KWNWZngq7Q)
-* [Make your scripts portable](https://intranet.hbtn.io/rltoken/Dyrnap2UC-LrzrmCOJRx8A)
+## General Objectives
+* To know how to create SSH keys
+* To know what the advantage of using ``#!/usr/bin/env bash`` over ``#!/bin/bash``
+* To know how to use ``while``, ``until`` and ``for`` loops
+* To know how to use ``if``, ``else``, ``elif`` and ``case`` condition statements
+* To know how to use the ``cut`` command
+* To know what files are, other comparison operators, and how to use them
 
----
-## Learning Objectives:bulb:
-What you should learn from this project:
+## General Requirements
+* Allowed editors: **vi**, **vim**, **emacs**
+* All files are interpreted on ``Ubuntu 20.04 LTS``
+* All files end with a new line
+* There is a ``README.md`` file, at the root of the folder of the project
+* All Bash script files are executable
+* Not allowed to use [awk](https://www.cyberciti.biz/faq/bash-scripting-using-awk/)
+* Bash script pass ``Shellcheck (version 0.7.0)`` without any error
+* The first line of all Bash scripts are exactly ``#!/usr/bin/env bash``
+* The second line of all the Bash scripts has comment explaining what the script doing
+### More info
+[Shellcheck](https://github.com/koalaman/shellcheck) is a tool that will help you write proper Bash scripts. It will make recommendations on your syntax and semantics and provide advice on edge cases that you might not have thought about. Shellcheck is your friend! **All your Bash scripts must pass ``Shellcheck`` without any error or you will not get any points on the task**. Also, for every feedback, Shellcheck will provide a code that you can use to get more information about the issue, for example for code ``SC2034``, you can browse [https://github.com/koalaman/shellcheck/wiki/SC2034](https://github.com/koalaman/shellcheck/wiki/SC2034).
+``Shellcheck`` is available on the school’s computers. If you want to use it on your own computer, here is how to [install it](https://github.com/koalaman/shellcheck#installing).
+For every feedback, **Shellcheck** will provide a code that you can use to get more information about the issue, for example for code SC2034, you can browse [https://github.com/koalaman/shellcheck/wiki/SC2034](https://github.com/koalaman/shellcheck/wiki/SC2034).
 
-* How to create SSH keys
-* What is the advantage of using  #!/usr/bin/env bash over #!/bin/bash
-* How to use while, until and for loops
-* How to use if, else, elif and case condition statements
-* How to use the cut command
-* What are files and other comparison operators, and how to use them
+### Resources
+**Read or watch:**
+* [Loops sample](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_01.html)
+* [Variable assignment and arithmetic](https://tldp.org/LDP/abs/html/ops.html)
+* [Comparison operators](https://tldp.org/LDP/abs/html/comparison-ops.html)
+* [File test operators](https://tldp.org/LDP/abs/html/fto.html)
+* [Make your scripts portable](https://www.cyberciti.biz/tips/finding-bash-perl-python-portably-using-env.html)
+* [19 Common SSH Commands in Linux With Examples](https://phoenixnap.com/kb/linux-ssh-commands)
+* [Linux and Mac OS users (How do I set up SSH authentication keys)](https://askubuntu.com/questions/61557/how-do-i-set-up-ssh-authentication-keys)
+* [Windows users (To Generate RSA keys with SSH by using PuTTYgen)](https://docs.rackspace.com/support/how-to/generating-rsa-keys-with-ssh-puttygen/)
+* [Generate an SSH Key Pair on UNIX and UNIX-Like Systems](https://docs.oracle.com/en/cloud/cloud-at-customer/occ-get-started/generate-ssh-key-pair.html)
+* [How to Create a Public/Private Key Pair](https://docs.oracle.com/cd/E19683-01/806-4078/6jd6cjru7/index.html)
+* [SSH login without password](http://linuxproblem.org/art_9.html)
 
----
-
-### [0. Create a SSH RSA key pair](./0-RSA_public_key.pub)
-* Read for this task:
-
-
-### [1. For Holberton School loop](./1-for_holberton_school)
-* Write a Bash script that displays Holberton School 10 times.
-
-
-### [2. While Holberton School loop](./2-while_holberton_school)
-* Write a Bash script that displays Holberton School 10 times.
-
-
-### [3. Until Holberton School loop](./3-until_holberton_school)
-* Write a Bash script that displays Holberton School 10 times.
-
-
-### [4. If 9, say Hi!](./4-if_9_say_hi)
-* Write a Bash script that displays Holberton School 10 times, but for the 9th iteration, displays Holberton School and then Hi on a new line.
-
-
-### [5. 4 bad luck, 8 is your chance](./5-4_bad_luck_8_is_your_chance)
-* Write a Bash script that loops from 1 to 10 and:
-
-
-### [6. Superstitious numbers](./6-superstitious_numbers)
-* Write a Bash script that displays numbers from 1 to 20 and:
-
-
-### [7. Clock](./7-clock)
-* Write a Bash script that displays the time for 12 hours and 59 minutes:
-
-
-### [8. For ls](./8-for_ls)
-* Write a Bash script that displays:
-
-
-### [9. To file, or not to file](./9-to_file_or_not_to_file)
-* Write a Bash script that gives you information about the holbertonschool file.
-
-
-### [10. FizzBuzz](./10-fizzbuzz)
-* Write a Bash script that displays numbers from 1 to 100.
-
-
-### [11. Read and cut](./100-read_and_cut)
-* help: read
-
-
-### [12. Tell the story of passwd](./101-tell_the_story_of_passwd)
-* 
-
-
-### [13. Let's parse Apache logs](./102-lets_parse_apache_logs)
-* 
-
-
-### [14. Dig the data](./103-dig_the-data)
-* Now that you’ve parsed the Apache log file, let’s sort the data so you can get a better idea of what is going on.
-
----
-
-## Author
-* **Arturo Victoria Rincon** - [arvicrin](https://github.com/arvicrin)
+## Files & Description
+|  S/N	|	File	|	Description	|
+|:-----:|---------------|-----------------------|
+|  1.	|[0-RSA_public_key.pub](https://github.com/Dikachis/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/0-RSA_public_key.pub) | To create a RSA key pair. |
+|  2.   |[1-for_best_school](https://github.com/Dikachis/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/1-for_best_school) | To write a Bash script that displays ``Best School`` 10 times. <ul><li> **Requirement:** <ul><li>You must use the ``for`` loop (``while`` and ``until`` are forbidden)</li></ul></li></ul> |
+|  3.   |[2-while_best_school](https://github.com/Dikachis/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/2-while_best_school) | To write a Bash script that displays ``Best School`` 10 times. <ul><li> **Requirement:** <ul><li>You must use the ``for`` loop (``while`` and ``until`` are forbidden)</li></ul></li></ul>|
+|  4.   |[3-until_best_school](https://github.com/Dikachis/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/3-until_best_school) | To write a Bash script that displays ``Best School`` 10 times. |
+|  5.   |[4-if_9_say_hi](https://github.com/Dikachis/alx-system_engineering-devops/blob/main/0x04-loops_conditions_and_parsing/4-if_9_say_hi) | To Write a Bash script that displays ``Best School`` 10 times, but for the 9th iteration, displays ``Best School`` and then Hi on a new line. |
